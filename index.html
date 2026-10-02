@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thor Jack's</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Thor Jack's Electronics Repair & Services</h1>
+        <p>Fast and Reliable Electronics Repair Services</p>
+    </header>
+    <main class="main-content">
+        <!-- Repair Services -->
+        <section class="services-section">
+            <h2>Our Standard Services and Rates</h2>
+            <table class="repair-price">
+                <thead>
+                    <tr class="table-header">
+                        <th>Service Offered</th>
+                        <th>Estimated Time</th>
+                        <th>Starting Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td>OS Reinstallation & Cleanup</td>
+                        <td>1-2 Hours</td>
+                        <td class="price">₱1,500</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Hardware Upgrade RAM/SSD</td>
+                        <td>30-45 Mins</td>
+                        <td class="price">₱800</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Backup and Recovery</td>
+                        <td>24-48 Hours</td>
+                        <td class="price">₱2,500</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Virus and Malware Removal</td>
+                        <td>1-2 Hours</td>
+                        <td class="price">₱1,200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- services request form -->
+        <section class="form-section">
+            <h2>Book A Service Request</h2>
+            <form id="service-request-form" action="submit_form.php" method="POST">
+
+                <!--Customer Name-->
+                <div>
+                    <label for="Costumer-name">Full Name:</label>
+                    <input type="text" id="Costumer-name" name="Costumer-name" required>
+                </div>
+
+                <!--Customer Email-->
+                <div>
+                    <label for="Costumer-email">Email Address:</label>
+                    <input type="email" id="Costumer-email" name="Costumer-email" required>
+                </div>
+
+                <!--Customer Phone Number-->
+                <div>
+                    <label for="costumer-phone">Phone Number:</label>
+                    <input type="tel" id="costumer-phone" name="costumer-phone" required>
+                </div>
+
+                <!--Device Type-->
+                <div>
+                    <label for="Device-type">Device Type:</label>
+                    <select id="Device-type" name="Device-type" required>
+                        <option value="" disabled selected>Select Device Type</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Desktop">Desktop</option>
+                        <option value="Macbook">Macbook</option>
+                        <option value="iMac ">iMac</option>
+                        <option value="custom">Others: Put on the Problem Description</option>
+                    </select>
+                </div>
+
+                <!--Core Service-->
+                <div>
+                    <label for="Core-service">Prefered Core Services:</label>
+                </div>
+                </div>
+                <label><input type="radio" id="Core-service" name="Core-service" value="OS Reinstallation & Cleanup"
+                        required> OS Reinstallation & Cleanup</label>
+                <label><input type="radio" id="Core-service" name="Core-service" value="Hardware Upgrade RAM/SSD"
+                        required> Hardware Upgrade RAM/SSD</label>
+                <label><input type="radio" id="Core-service" name="Core-service" value="Backup and Recovery" required>
+                    Backup and Recovery</label>
+                <label><input type="radio" id="Core-service" name="Core-service" value="Virus and Malware Removal"
+                        required> Virus and Malware Removal</label>
+
+                </div>
+
+                <!--Service Priority-->
+                <div class="form-group">
+                    <label for="service-priority">Service Priority</label>
+                    <select id="service-priority" name="servicePriority" required>
+                        <option value="" disabled selected>Select Service Priority</option>
+                        <option value="standard">Standard (3-5 days)</option>
+                        <option value="express">Express (24-48 hours, +₱500)</option>
+                        <option value="emergency">Emergency (Same day, +₱1,000)</option>
+                    </select>
+                </div>
+
+                <!--Additional Services-->
+                <div class="form-group">
+                    <label>Additional Services (Optional)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="additionalServices" value="antivirus"> Install Premium
+                            Antivirus</label>
+                        <label><input type="checkbox" name="additionalServices" value="deep-clean"> External Physical
+                            Deep
+                            Clean</label>
+                        <label><input type="checkbox" name="additionalServices" value="delivery"> Return Delivery to
+                            Home
+                            Address</label>
+                    </div>
+
+                    <!--Drop off/Pick up-->
+                    <div class="drop-off">
+                        <label for="Drop-off">Drop off/Pick up:</label>
+                        <input type="datetime-local" id="Drop-off" name="Drop-off" required>
+                    </div>
+
+                    <!--Problem Description/Text Area-->
+                    <div class="problem-box">
+                        <label>Problem Description:</label>
+                        <textarea id="problem-description" name="problem-description" rows="5" required></textarea>
+                    </div>
+
+                    <!--Submit/Reset Form Buttons-->
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="socmed-logo">
+            <div class="facebook">
+                <a href="https://www.facebook.com/xzeth"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="insta"><a href="https://www.instagram.com/kuyamojack26/"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="tiktok"><a href="https://www.tiktok.com/@kuyamojack26"><i class="fa-brands fa-tiktok"></i></a></div>
+        </div>
+        <p>&copy; 2026 Thor Jack's Electronics Repair. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

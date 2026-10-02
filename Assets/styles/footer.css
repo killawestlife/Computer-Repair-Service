@@ -1,0 +1,21 @@
+.socmed-logo {
+    display:flex;
+    justify-content: center;
+}
+.socmed-logo i {
+    color: #ffffff;
+
+}
+.socmed-logo i:hover {
+    transform: scale(2.1);
+}
+.facebook i:hover {
+    color: blue;
+}
+.insta i:hover {
+    color: rgb(244, 5, 164);
+}
+.tiktok i:hover {
+    color: black;
+}
+    
